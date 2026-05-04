@@ -12,8 +12,15 @@ import lombok.Data;
 public class Comida {
     @Id
     private Long id;
-    @Column(name = "nome_comida", length = 100,
-        columnDefinition = "char(100)", nullable = false)
+
+    @Column(name = "nome_comida", length = 100, nullable = false)
     private String nome;
+
+    @Column(nullable = false)
     private Double preco;
+
+    @Column(nullable = false)
+    private Integer qtd;
+
+    private String descricao;
 }

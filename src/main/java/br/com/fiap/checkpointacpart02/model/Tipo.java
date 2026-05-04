@@ -12,7 +12,15 @@ import lombok.Data;
 public class Tipo {
     @Id
     private Long id;
-    @Column(name = "tipo_comida", length = 100,
-            columnDefinition = "char(100)", nullable = false)
-    private String tipo;
+
+    @Column(nullable = false)
+    private String paisDeOrigem;
+
+    private String pontoDaCarne;
+
+    @Column(nullable = false)
+    private Boolean contemAlergenicos;
+
+    @Column(nullable = false)
+    private String temperaturaDoPrato;
 }
